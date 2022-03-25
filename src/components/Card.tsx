@@ -1,4 +1,4 @@
-import data from "../store/data"
+import data from "../store/data_album"
 
 function Card(){
     const myCard = {
@@ -21,14 +21,18 @@ function Card(){
     return(
         <>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <div style={myCard}>
-            <img width="200" src={data.album.images[0].url} alt="Foto Card" />
-            <h3>{data.name}</h3>
-            <p>{data.artists[0].name}</p>
+          {data.map(e => {
+            return(
+            <div style={myCard} key={e.id}>
+            <img width="200" src={e.album.images[0].url} alt="Foto Card" />
+            <h3>{e.name}</h3>
+            <p>{e.artists[0].name}</p>
             <button style={myButton}>
               Select
             </button>
           </div>
+            )
+          })}
         </div>
         </>
     )
