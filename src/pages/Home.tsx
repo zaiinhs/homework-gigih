@@ -1,14 +1,12 @@
-import Card from "../components/Card";
-import Gif from "../components/Gif";
+import Playlists from "../components/Playlist";
+// import Gif from "../components/Gif";
 
 function Home() {
   return(
     <>
-      <h1>Home</h1>
-      <Card/>
-      <br /><br />
-      <h1>Exercise</h1>
-      <Gif/>
+      <h1 style={{textAlign: "center", marginTop: "30px"}}>Spotify <br />Generasi GIGIH 2.0</h1>
+      <Playlists/>
+      {/* <Gif/> */}
     </>
   )
 }

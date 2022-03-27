@@ -1,18 +1,18 @@
 import SearchBar from '../Search'
-import ImageBar from '../Image'
-import gif from '../../store/gif'
 import ButtonElement from '../Buttons'
+import {GIF_ITEMS} from "../../constants/"
 
 function Gif(){
     return(
         <>
             <div>
-                <div>
+                <div style={{textAlign: "center"}}>
+                <h1>Exercise</h1>
                     <SearchBar/>
                     <ButtonElement/>
                 </div>
-                    <div style={{display: "flex"}}>
-                        {gif.map( e => {
+                    <div style={{display: "flex", flexWrap:"wrap", justifyContent: "center"}}>
+                        {GIF_ITEMS.map( e => {
                             return(
                                 <div style={{padding: "40px"}} key={e.id}>
                                     <img src={e.url} alt={e.title}/><br />
